@@ -65,6 +65,30 @@ function DifficultyName( name, pn )
 	end
 end
 
+-- < ------------------------------------- > --
+-- 			Individual Text Rainbow
+--[[
+	It's really bad looking, yes.
+
+	name: will be the text (or in this case, letter) to tween
+	n1: X offset
+	n2: effect offset of rainbow
+
+	Later: wIl try to make it parse a text string to separate it into
+	a complete text, so you don't have to make individual actors for
+	each letter.
+]]
+-- < ------------------------------------- > --
+local function ITR(name, n1, n2)
+	local t = Def.ActorFrame{ OnCommand=cmd(x,-15;zoom,1.5;bob;effectmagnitude,0,5,0;effectoffset,n2);
+				Def.BitmapText{ Font="Splat2", Text=name, InitCommand=cmd(strokecolor,color("0,0,0,1");x,-6+(12*n1);rainbow;effectoffset,n2); },
+			};
+
+	return t;
+end 
+
+-- < ------------------------------------- > --
+
 -- (c) 2018 Jose_Varela
 -- All rights reserved.
 --
