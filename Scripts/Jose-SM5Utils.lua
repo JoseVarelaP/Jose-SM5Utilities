@@ -81,7 +81,7 @@ end
 -- < ------------------------------------- > --
 local function ITR(name, n1, n2)
 	local t = Def.ActorFrame{ OnCommand=cmd(x,-15;zoom,1.5;bob;effectmagnitude,0,5,0;effectoffset,n2);
-				Def.BitmapText{ Font="Splat2", Text=name, InitCommand=cmd(strokecolor,color("0,0,0,1");x,-6+(12*n1);rainbow;effectoffset,n2); },
+				Def.BitmapText{ Font="Common Normal", Text=name, InitCommand=cmd(strokecolor,color("0,0,0,1");x,-6+(12*n1);rainbow;effectoffset,n2); },
 			};
 
 	return t;
